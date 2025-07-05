@@ -1,33 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
   <head>
-    <meta charset="UTF-8" />
-    <title>Vue Mastery</title>
-    <!-- Import Styles -->
-    <link rel="stylesheet" href="./assets/styles.css" />
-    <!-- Import Vue.js -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
   </head>
   <body>
-    <div id="app">
-      <div class="nav-bar">
-        <div class="nav-content">
-          <h2>Vue Mastery Store</h2>
-          <div class="cart-indicator" v-if="cartItems.length > 0">
-            <span class="cart-icon">🛒</span>
-            <span class="cart-count">{{ cartItems.length }}</span>
-          </div>
-        </div>
-      </div>
-      <product-display :premium="premium" :cart-items="cartItems" @remove-from-cart="removeCartItem" @add-to-cart="addCartItem"></product-display>
-    </div>
-    <!-- Import App -->
-    <script src="./main.js"></script>
-    <script src="./components/product.js"></script>
-
-    <!-- Mount App -->
-     <script>
-      const mountedApp = app.mount('#app');
-     </script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
