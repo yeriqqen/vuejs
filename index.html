@@ -68,7 +68,7 @@
             </div>
             
             <div class="product-actions">
-              <button class="add-to-cart-btn" @click="addToCart">
+              <button class="add-to-cart-btn" @click="addToCart" v-bind:disabled="!inStock">
                 <span class="btn-icon">🛒</span>
                 Add to Cart
               </button>

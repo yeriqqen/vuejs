@@ -17,6 +17,7 @@ const app = Vue.createApp({
                     id: 2235, image: './assets/images/socks_blue.jpg', quantity: 0, color: 'blue'
                 }
             ],  
+            inStock: false,
         }
     },
     methods: {
