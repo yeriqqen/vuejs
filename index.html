@@ -12,7 +12,11 @@
     <div id="app">
       <div class="nav-bar">
         <div class="nav-content">
-          <h2>Vue Mastery</h2>
+          <h2>Vue Mastery Store</h2>
+          <div class="cart-indicator" v-if="cartItems > 0">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-count">{{ cartItems }}</span>
+          </div>
         </div>
       </div>
       
@@ -23,17 +27,46 @@
           </div>
           
           <div class="product-info">
+            <div class="product-badge" v-if="onSale">
+              <span class="sale-badge">🔥 ON SALE</span>
+            </div>
+            
             <h1>{{ product }}</h1>
             <p>{{ description }}</p>
             
-            <div class="product-actions">
-              <a :href="url" target="_blank" rel="noopener noreferrer" class="button">
-                Learn Vue 3
-              </a>
+            <div class="product-features">
+              <div class="feature-item">
+                <span class="feature-icon">✨</span>
+                <span>Premium Quality</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🚚</span>
+                <span>Free Shipping</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">💯</span>
+                <span>100% Cotton</span>
+              </div>
             </div>
 
-            <div class="product-price" v-if="onSale">
-              <span class="sale">On Sale!</span>
+            <div class="sizes-section">
+              <h3>Available Sizes:</h3>
+              <div class="size-options">
+                <span v-for="size in sizes" :key="size" class="size-option">
+                  {{ size }}
+                </span>
+              </div>
+            </div>
+            
+            <div class="product-actions">
+              <button class="add-to-cart-btn" @click="addToCart">
+                <span class="btn-icon">🛒</span>
+                Add to Cart
+              </button>
+              <a :href="url" target="_blank" rel="noopener noreferrer" class="learn-more-btn">
+                <span class="btn-icon">📚</span>
+                Learn Vue 3
+              </a>
             </div>
           </div>
         </div>
