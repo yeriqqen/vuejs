@@ -198,10 +198,6 @@ p {
   flex: 1;
 }
 
-.product-info {
-  padding: 20px;
-}
-
 .product-actions {
   display: flex;
   justify-content: center;
@@ -210,10 +206,20 @@ p {
 
 /* Modern UI Enhancements */
 .product-badge {
-  margin-bottom: 15px;
+  position: absolute;
+  top: 350px;
+  right: 850px;
+  z-index: 10;
+}
+
+.product-info {
+  position: relative;
+  padding: 20px;
 }
 
 .sale-badge {
+  display: block;
+  width: fit-content;
   background: linear-gradient(45deg, #ff6b6b, #ee5a24);
   color: white;
   padding: 8px 16px;
@@ -371,6 +377,11 @@ p {
 
   h1 {
     font-size: 32px;
+  }
+
+  .content {
+    height: 100vh;
+    overflow-y: auto;
   }
 
   .product-display {
