@@ -312,6 +312,7 @@ p {
   margin-top: 30px;
 }
 
+.remove-from-cart-btn,
 .add-to-cart-btn {
   background: linear-gradient(135deg, #4caf50, #45a049);
   border: none;
@@ -329,6 +330,7 @@ p {
   gap: 8px;
 }
 
+.remove-from-cart-btn:hover,
 .add-to-cart-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
