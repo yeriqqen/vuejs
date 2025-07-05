@@ -8,7 +8,15 @@ const app = Vue.createApp({
             onSale: true,
             sizes: ['S', 'M', 'L', 'XL'],
             selectedSize: null,
-            cartItems: 0
+            cartItems: 0,
+            variants: [
+                {
+                    id: 2234,  image: './assets/images/socks_green.jpg', quantity: 10, color: 'green'
+                },
+                {
+                    id: 2235, image: './assets/images/socks_blue.jpg', quantity: 0, color: 'blue'
+                }
+            ],  
         }
     },
     methods: {
@@ -20,6 +28,9 @@ const app = Vue.createApp({
             setTimeout(() => {
                 btn.style.transform = '';
             }, 150);
+        },
+        updateImage(image) {
+            this.image = image;
         }
     }
 })
